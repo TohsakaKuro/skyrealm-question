@@ -13,4 +13,12 @@ function vaildAndGetLoggedUserInfo (ctx) {
   return userInfo;
 }
 
+function getLoggedUserInfo (ctx) {
+  if (ctx.session.userInfo) {
+    return ctx.session.userInfo;
+  }
+  return null;
+}
+
 exports.vaildAndGetLoggedUserInfo = vaildAndGetLoggedUserInfo;
+exports.getLoggedUserInfo = getLoggedUserInfo;

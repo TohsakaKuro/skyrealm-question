@@ -25,6 +25,7 @@ storage.connect()
   .then(() => {
     app.listen(3000);
     console.log('server started at http://localhost:3000');
+    console.log('open http://localhost:3000/graphqlApi in the browser to validation api.');
   })
   .catch((err) => {
     console.error('db error', err);
