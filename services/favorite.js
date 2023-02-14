@@ -1,6 +1,6 @@
 'use strict';
 const { db } = require('../db/nedb');
-const { vaildAndGetLoggedUserInfo } = require('../utils/user');
+const { vaildAndGetLoggedUserInfo, getLoggedUserInfo } = require('../utils/user');
 
 /**
  * add favorite
@@ -48,7 +48,10 @@ async function unfavorite (parents, args, ctx, info) {
  * @returns success
  */
 async function checkFavorite (parents, args, ctx, info) {
-  const userInfo = vaildAndGetLoggedUserInfo(ctx);
+  const userInfo = getLoggedUserInfo(ctx);
+  if (!userInfo) {
+    return false;
+  }
   const storeId = parents.id;
   const favorite = await db.favorite.findOne({ userId: userInfo.userId, storeId });
   if (favorite) {

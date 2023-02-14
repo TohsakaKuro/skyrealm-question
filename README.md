@@ -111,7 +111,7 @@ query{
 query store page
 
 ```
-{
+query{
   storePageList(
     lng: 20
     lat: 20
