@@ -6,8 +6,8 @@ the answer for some [Backend Coding Question]
 
 ### prepare
 
-1. make sure you have install "nodejs". ⚠️node version : v18.13.0
-2. make sure you have install "yarn": `npm install yarn -g` to install it.
+1. make sure you have installed "nodejs". ⚠️node version : v18.13.0
+2. make sure you have installed "yarn": `npm install yarn -g` to install it.
 3. cd this project path, and command `yarn install` to install node modules.
 
 ### run command
@@ -15,6 +15,11 @@ the answer for some [Backend Coding Question]
 * `npm run dev` to launch the program, and link to http://localhost:3000/graphqlApi to open the ui and validation some api.
 * `npm run initdb` to initialization or reinitialize some mocked data.
 * `npm run test` to run mocha test. (It's not done 😁)
+
+### interface
+  Open http://localhost:3000/graphqlApi in the browser.
+  Or POST http://localhost:3000/graphqlApi.
+
 
 ## project tree
 
